@@ -1,0 +1,53 @@
+import { useEffect, useState } from "react";
+import { USER_API } from "../../../../../../config";
+
+const Suggestions = (props) => {
+  const [suggestions, setSuggestions] = useState([]);
+  useEffect(() => {
+    fetch(
+      USER_API + "/" +
+        props.user.id +
+        "/suggestions",
+      {
+        method: "GET",
+        headers: {
+          "Content-Type": "application/json",
+        },
+      }
+    )
+      .then((resp) => resp.json())
+      .then((data) => {
+        setSuggestions(data);
+      });
+  }, [props]);
+  return (
+    <div className="suggestions full-width">
+      <div className="sd-title">
+        <h3>Suggestions</h3>
+        <i className="la la-ellipsis-v"></i>
+      </div>
+      <div className="suggestions-list">
+        {suggestions.map((sug, b) => (
+          <div className="suggestion-usd" key={b}>
+            <img src={"./images/" + sug.username + "png"} alt="" />
+            <div className="sgt-text">
+              <h4>{sug.fullname}</h4>
+              <span>{sug.title}</span>
+            </div>
+            <span>
+              <i className="la la-plus"></i>
+            </span>
+          </div>
+        ))}
+
+        <div className="view-more">
+          <a href="./index.html#" title="">
+            View More
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Suggestions;
