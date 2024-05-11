@@ -25,7 +25,7 @@ const Login = (props) => {
                       </a>
                     </li>
                   </ul>
-                  <SignIn loginUser={props.loginUser}/>
+                  <SignIn loginUser={props?.loginUser}/>
                   <SignUp />
                   <div id="err"></div>
                 </div>

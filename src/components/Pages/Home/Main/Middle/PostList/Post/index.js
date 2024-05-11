@@ -207,20 +207,18 @@ class Post extends Component {
               </li> */}
             </ul>
             <p>
-              {/* {this.state.showPost
-                ? post?.description
-                : post?.description?.substring(1, 10) + "... "} */}
-              {!this.state.showPost && (
-                <a href="#" title="" onClick={this.handleViewPost}>
-                  View Profile
-                </a>
-              )}
-              {this.state.showPost && (
-                <a href="#" title="" onClick={this.handleViewPost}>
-                  {" show less"}
-                </a>
-              )}
-            </p>
+  {!this.state.showPost && (
+    <a href="profile.js" title="" onClick={this.handleViewProfile}>
+      View Profile
+    </a>
+  )}
+  {this.state.showPost && (
+    <a href="#" title="" onClick={this.handleViewPost}>
+      Show Less
+    </a>
+  )}
+</p>
+
             <ul className="skill-tags">
               {post.skills.map((skl, idx2) => (
                 <li key={idx2}>
