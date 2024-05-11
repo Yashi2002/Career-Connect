@@ -5,6 +5,13 @@ import Login from "./components/Pages/Login";
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import UserProfilePage from "./components/Pages/Home/Main/LeftSide/UserData/FF/UserProfilePage";
 import AuthLayout from "./components/authLayout/AuthLayout";
+// import ServicesNavbar from "./components/Pages/Home/Main/LeftSide/UserData/FF/ServicesNavbar";
+import Called from "./components/Pages/Home/Main/LeftSide/UserData/FF/Called";
+import FormPage from "./components/Pages/Home/Main/LeftSide/UserData/FF/FormPage";
+import MentorProfile from "./components/Pages/Home/Main/Middle/PostList/Post/MentorProfile";
+import Called2 from "./components/Pages/Home/Main/Middle/PostList/Post/Called2";
+import Book from "./components/Pages/Home/Main/Middle/PostList/Post/Book";
+import SignUp from "./components/Pages/Login/SignUp";
 
 const App = () => {
   const [userLoggedIn, setUserLoggedIn] = useState(false);
@@ -43,16 +50,40 @@ const App = () => {
       </AuthLayout>,
 
     },
+    
+
     {
       path:"/",
-      element:<AuthLayout user={userTemp}>
+      element:<AuthLayout user={user}>
         <Home user={user}/>
       </AuthLayout>,
 
     },{
       path:"/profile",
       element:<UserProfilePage/>
-    }
+    },{
+      path:"/calling",
+      element:<Called/>
+    },{
+      path:"/form",
+      element:<FormPage/>
+    },
+  {
+    path: "/profile2",
+    element:<MentorProfile/>
+  },
+  {
+    path: "/calling2",
+    element: <Called2/>
+  },{
+    path: "/book",
+    element: <Book/>
+  },
+{
+  path: "/book",
+  element: <Book/>
+},
+
   ])
 
  

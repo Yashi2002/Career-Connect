@@ -1,4 +1,5 @@
 import { Component } from "react";
+import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
 import CommentSection from "./CommentSection";
 import { POST_API } from "../../../../../../../config";
 
@@ -207,16 +208,11 @@ class Post extends Component {
               </li> */}
             </ul>
             <p>
-  {!this.state.showPost && (
-    <a href="profile.js" title="" onClick={this.handleViewProfile}>
-      View Profile
-    </a>
-  )}
-  {this.state.showPost && (
-    <a href="#" title="" onClick={this.handleViewPost}>
-      Show Less
-    </a>
-  )}
+          <li>
+          <Link to="/profile2" title="">
+            Visit Profile
+          </Link>
+        </li>
 </p>
 
             <ul className="skill-tags">

@@ -30,7 +30,7 @@ class PostForm extends Component {
     //   formElem.querySelector("#pay_rate_per_hr_dollar").value
     // );
     // const location = formElem.querySelector("#location").value;
-    // const description = formElem.querySelector("#description").value;
+    const description = formElem.querySelector("#description").value;
 
     // validate required fields
     if (!title) {
@@ -52,7 +52,7 @@ class PostForm extends Component {
         // job_type,
         // pay_rate_per_hr_dollar,
         // location,
-        // description,
+        description,
       }),
     })
       .then((resp) => resp.json())
@@ -125,6 +125,13 @@ class PostForm extends Component {
                     placeholder="Description"
                   ></textarea>
                 </div> */}
+                 <div className="col-lg-12">
+                  <textarea
+                    name="description"
+                    id="description"
+                    placeholder="Description"
+                  ></textarea>
+                </div> 
                 <div className="col-lg-12">
                   <ul>
                     <li>

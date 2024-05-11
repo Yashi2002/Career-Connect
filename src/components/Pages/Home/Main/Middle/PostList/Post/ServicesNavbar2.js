@@ -21,7 +21,7 @@ const ServicesNavbar = () => {
           {showOptions && (
             <ul className="options-list">
               <li>
-            <Link to="/calling" title="">
+            <Link to="/calling2" title="">
                Call and Session
             <li>15 mins | $ 0+</li>
             </Link>

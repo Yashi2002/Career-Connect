@@ -15,12 +15,12 @@ const Login = (props) => {
                 <div className="login-sec">
                   <ul className="sign-control">
                     <li data-tab="tab-1" className="current">
-                      <a href="./#" title="">
+                      <a href="/login" title="">
                         Sign in
                       </a>
                     </li>
                     <li data-tab="tab-2">
-                      <a href="./#" title="">
+                      <a href="/login" title="">
                         Sign up
                       </a>
                     </li>
