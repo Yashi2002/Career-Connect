@@ -2,10 +2,11 @@ const Profile = (props) => {
   const { user } = props;
 
   return (
+    
     <div className="user-profile">
       <div className="username-dt">
         <div className="usr-pic">
-          <img src={"./images/" + user?.username + ".png"} alt="" />
+          <img src= "https://cdni.iconscout.com/illustration/premium/thumb/woman-profile-8187680-6590622.png?f=webp" alt="your avatar" />
         </div>
       </div>
       <div className="user-specs">
